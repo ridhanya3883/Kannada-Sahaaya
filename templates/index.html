@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kannada Sahaaya</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="logo">ಕನ್ನಡ ಸಹಾಯ <span>Kannada Sahaaya</span></div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#translator">Translator</a>
+            <a href="#situations">Everyday Phrases</a>
+            <a href="#about">About</a>
+        </div>
+    </nav>
+
+
+    <!-- HOME -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+            <p class="small-heading">YOUR EVERYDAY KANNADA COMPANION</p>
+
+            <h1>Connect through <span>language.</span></h1>
+
+            <p>
+                Speak with confidence in everyday situations.
+                Learn useful Kannada phrases for healthcare,
+                shopping, travel and daily conversations.
+            </p>
+
+            <a href="#translator" class="hero-button">Start translating →</a>
+        </div>
+
+        <div class="hero-card">
+            <h2>ನಮಸ್ಕಾರ</h2>
+            <p>Namaskara</p>
+            <span>Hello · A warm greeting</span>
+        </div>
+
+    </section>
+
+
+    <!-- TRANSLATOR -->
+    <section class="translator-section" id="translator">
+
+        <div class="section-heading">
+            <p class="small-heading">SIMPLE. QUICK. USEFUL.</p>
+            <h2>English to Kannada Translator</h2>
+            <p>Enter an English phrase and discover how to say it in Kannada.</p>
+        </div>
+
+        <div class="translator-box">
+
+            <label for="englishText">Enter your English phrase</label>
+
+            <textarea
+                id="englishText"
+                placeholder="Example: Where is the hospital?"
+                rows="3"></textarea>
+
+            <button id="translateBtn">Translate to Kannada →</button>
+
+            <div class="result-box">
+                <p class="result-label">KANNADA TRANSLATION</p>
+                <div id="kannadaResult">
+                    Your Kannada translation will appear here.
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EVERYDAY PHRASES -->
+    <section class="situations-section" id="situations">
+
+        <div class="section-heading">
+            <p class="small-heading">LEARN THROUGH EVERYDAY SITUATIONS</p>
+            <h2>Explore Everyday Phrases</h2>
+            <p>Find useful Kannada expressions based on your situation.</p>
+        </div>
+
+        <!-- SEARCH -->
+        <div class="phrase-search">
+            <input
+                type="text"
+                id="searchPhrase"
+                placeholder="Search for a phrase..."
+            >
+        </div>
+
+
+        <!-- HEALTHCARE -->
+        <div class="category-card">
+            <h3>🏥 Healthcare</h3>
+            <p>Useful phrases for hospitals and pharmacies.</p>
+
+            <button class="phrase" data-text="I need a doctor">I need a doctor</button>
+            <button class="phrase" data-text="Where is the hospital?">Where is the hospital?</button>
+            <button class="phrase" data-text="I have a headache">I have a headache</button>
+            <button class="phrase" data-text="I have a stomachache">I have a stomachache</button>
+            <button class="phrase" data-text="I need medicine">I need medicine</button>
+            <button class="phrase" data-text="Where is the pharmacy?">Where is the pharmacy?</button>
+            <button class="phrase" data-text="I have a fever">I have a fever</button>
+            <button class="phrase" data-text="Please help me">Please help me</button>
+            <button class="phrase" data-text="I am not feeling well">I am not feeling well</button>
+            <button class="phrase" data-text="Please call a doctor">Please call a doctor</button>
+        </div>
+
+
+        <!-- SHOPPING -->
+        <div class="category-card">
+            <h3>🛍️ Shopping</h3>
+            <p>Communicate easily while shopping.</p>
+
+            <button class="phrase" data-text="How much is this?">How much is this?</button>
+            <button class="phrase" data-text="Thank you">Thank you</button>
+            <button class="phrase" data-text="I want this">I want this</button>
+            <button class="phrase" data-text="Do you have another size?">Do you have another size?</button>
+            <button class="phrase" data-text="Is there a discount?">Is there a discount?</button>
+            <button class="phrase" data-text="Can I pay by card?">Can I pay by card?</button>
+            <button class="phrase" data-text="I am just looking">I am just looking</button>
+            <button class="phrase" data-text="Please give me a bag">Please give me a bag</button>
+            <button class="phrase" data-text="Where is the market?">Where is the market?</button>
+            <button class="phrase" data-text="That is too expensive">That is too expensive</button>
+        </div>
+
+
+        <!-- TRANSPORT -->
+        <div class="category-card">
+            <h3>🚌 Transport</h3>
+            <p>Get around and ask for directions.</p>
+
+            <button class="phrase" data-text="Where is the bus stop?">Where is the bus stop?</button>
+            <button class="phrase" data-text="Where is the railway station?">Where is the railway station?</button>
+            <button class="phrase" data-text="How far is it?">How far is it?</button>
+            <button class="phrase" data-text="Please stop here">Please stop here</button>
+            <button class="phrase" data-text="I need a taxi">I need a taxi</button>
+            <button class="phrase" data-text="Which bus goes there?">Which bus goes there?</button>
+            <button class="phrase" data-text="Where is the bus?">Where is the bus?</button>
+            <button class="phrase" data-text="I want to go to the railway station">I want to go to the railway station</button>
+            <button class="phrase" data-text="How long will it take?">How long will it take?</button>
+            <button class="phrase" data-text="Please show me the way">Please show me the way</button>
+        </div>
+
+
+        <!-- DAILY CONVERSATIONS -->
+        <div class="category-card">
+            <h3>💬 Daily Conversations</h3>
+            <p>Start simple and friendly conversations.</p>
+
+            <button class="phrase" data-text="Hello">Hello</button>
+            <button class="phrase" data-text="Good morning">Good morning</button>
+            <button class="phrase" data-text="Good evening">Good evening</button>
+            <button class="phrase" data-text="How are you?">How are you?</button>
+            <button class="phrase" data-text="I am fine">I am fine</button>
+            <button class="phrase" data-text="What is your name?">What is your name?</button>
+            <button class="phrase" data-text="My name is">My name is</button>
+            <button class="phrase" data-text="I don't understand">I don't understand</button>
+            <button class="phrase" data-text="Can you speak slowly?">Can you speak slowly?</button>
+            <button class="phrase" data-text="Nice to meet you">Nice to meet you</button>
+        </div>
+
+
+        <!-- EMERGENCY -->
+        <div class="category-card">
+            <h3>🚨 Emergency</h3>
+            <p>Important phrases to use in urgent situations.</p>
+
+            <button class="phrase" data-text="I am lost">I am lost</button>
+            <button class="phrase" data-text="Call the police">Call the police</button>
+            <button class="phrase" data-text="Call an ambulance">Call an ambulance</button>
+            <button class="phrase" data-text="I need help">I need help</button>
+            <button class="phrase" data-text="There is an emergency">There is an emergency</button>
+            <button class="phrase" data-text="Please call my family">Please call my family</button>
+            <button class="phrase" data-text="I am in danger">I am in danger</button>
+            <button class="phrase" data-text="Where is the police station?">Where is the police station?</button>
+            <button class="phrase" data-text="I need water">I need water</button>
+            <button class="phrase" data-text="Please wait">Please wait</button>
+        </div>
+
+        <p id="noResults" style="display:none; text-align:center;">
+            No matching phrases found.
+        </p>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+
+        <p class="small-heading">ABOUT THE PROJECT</p>
+
+        <h2>Making Kannada easier for everyone.</h2>
+
+        <p>
+            Kannada Sahaaya is an everyday communication assistant
+            designed to help people who are unfamiliar with Kannada.
+            It provides useful translations and pronunciation support
+            across common real-life situations.
+        </p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Kannada Sahaaya | Connecting people through language.</p>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
